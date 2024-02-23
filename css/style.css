@@ -95,7 +95,7 @@ h2 {
     left: 250px;
     z-index: 1000;
     width: calc(100% - 250px);
-    padding: 20px 5px 30px 5px;
+    padding: 20px 25px 30px 5px;
     justify-content: end;
     align-items: center;
 }
@@ -133,8 +133,11 @@ nav ul a {
     margin: 13px;
 }
 
-/* section recent */
-
+/* section  */
+.section-container{
+    margin-bottom: 20px;
+}
+/* sectio recent */
 .row{
     gap: 15px;
 }
@@ -183,7 +186,20 @@ nav ul a {
     color: var(--color-secondary);
 }
 
+/* create-for */
+#create-for p{
+    color: var(--color-secondary);
+}
 
-
+#create-for h2{
+    margin-bottom: 10px;
+}
+#create-for p{
+    margin-bottom: 23px;
+}
+/* popular */
+#popular p{
+    margin-bottom: 10px;
+}
 
 /* media query */
