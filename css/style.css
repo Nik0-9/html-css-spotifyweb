@@ -125,6 +125,13 @@ nav ul a{
 .card{
     width: calc(100% / 6);
 }
+.card-img{
+    position: relative;
+}
+
+.card-img:hover .opacity{
+    display: block;
+}
 
 .img-hover{
     text-align: center;
@@ -133,12 +140,13 @@ nav ul a{
     left: 50%;
     transform: translate(-50% , -50%);
     font-size: 5em;
-    /* display: none; */
+    display: none;
 }
 
-.card-img{
-    position: relative;
+.card-img:hover .img-hover{
+    display: block;
 }
+
 .card-title{
     text-align: center;
 }
