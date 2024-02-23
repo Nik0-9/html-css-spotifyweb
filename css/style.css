@@ -146,6 +146,9 @@ nav ul a{
 .card-img:hover .img-hover{
     display: block;
 }
+.card-img img:hover{
+    opacity: 0.5;
+}
 
 .card-title{
     text-align: center;
