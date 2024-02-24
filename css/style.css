@@ -159,6 +159,7 @@ nav ul a {
 }
 
 .icon-side {
+    width: 20%;
     display: none;
 }
 
@@ -244,11 +245,12 @@ nav ul a {
     border-radius: 50%;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 .profile h5{
     color: var(--color-white);
     font-size: 1.2em;
-    margin-left: 5px;
+    margin: 0 5px;
 }
 
 /* section  */
@@ -336,6 +338,8 @@ nav ul a {
     display: block;
 }
 
+
+
 /* media query */
 
 @media screen and (max-width: 992px) {
@@ -364,6 +368,44 @@ nav ul a {
 
 @media screen and (max-width: 576px) {
     .card {
-        width: calc(100% - 20px);
+        width: calc(100% / 2 - 20px);
+    }
+    .logo-side{
+        display: none;
+    }
+    .icon-side{
+        margin: 6px 0 10px 8px;
+        display: block;
+        width: 25px;
+    }
+    .playlist{
+        display: none;
+    }
+    .list-top ul li a:last-child{
+        display: none;
+    }
+    #sidebar{
+        height: 100%;
+        width: 50px;
+    }
+    .bord a{
+        display: none;
+    }
+
+    .profile h5{
+        display: none;
+    }
+
+    .bord{
+        border: none;
+    }
+
+    main{
+        flex-grow: 1;
+    }
+
+    .header{
+        left: 50px;
+        width: 92%;
     }
 }
