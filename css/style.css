@@ -30,7 +30,7 @@ ul {
 /* general */
 body {
     font-family: "Montserrat", sans-serif;
-    font-size: 0.7em;
+    font-size: 0.9em;
 }
 
 .wrapper {
@@ -39,6 +39,17 @@ body {
     /* overflow: hidden; */
 }
 
+main {
+width: calc(100% - 200px);
+padding: 100px 20px 10px 20px;
+color: var(--color-white);
+    overflow-y: auto;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
 
 .content {
     height: calc(100vh - 90px);
@@ -103,30 +114,15 @@ h2 {
     transform: scale(1.1);
 }
 
-/* main */
-main {
-    width: calc(100% - 200px);
-    /* flex-grow: 1; */
-    padding: 100px 20px 10px 20px;
-    color: var(--color-white);
-    overflow-y: auto;
-}
-
-img {
-    width: 100%;
-    display: block;
-}
-
 /* nav-bar */
 nav {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 nav a {
     color: var(--color-secondary);
     font-weight: 500;
 }
-
 
 nav a:hover {
     color: var(--color-white);
@@ -146,7 +142,7 @@ nav ul a {
     /* flex-shrink: 0; */
 }
 
-
+/* sidebar */
 .logo-side {
     width: 70%;
     margin-bottom: 20px;
@@ -159,13 +155,21 @@ nav ul a {
     display: none;
 }
 
+#sidebar ul li {
+    display: flex;
+    align-items: center;
+}
+
 #sidebar ul li a {
     color: var(--color-secondary);
 }
 
-#sidebar ul li {
-    display: flex;
-    align-items: center;
+#sidebar ul li a:hover {
+    color: var(--color-white);
+}
+
+#sidebar ul img {
+    width: 30px;
 }
 
 .list-top {
@@ -182,13 +186,6 @@ nav ul a {
     border-left: 3px solid var(--color-green);
 }
 
-#sidebar ul li a:hover {
-    color: var(--color-white);
-}
-
-#sidebar ul img {
-    width: 20px;
-}
 
 .playlist {
     padding-left: 10px;
@@ -197,7 +194,9 @@ nav ul a {
 .playlist h4 {
     text-transform: uppercase;
     color: var(--color-white);
+    font-size: 1.3em;
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .playlist i {
@@ -206,18 +205,21 @@ nav ul a {
 }
 
 .playlist ul li {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .bottom-side img {
-    width: 13px;
+    width: 20px;
     /* color: var(--color-secondary); */
-
 }
 
 .bottom-side a {
     color: var(--color-secondary);
     margin-left: 5px;
+}
+.bottom-side a:hover{
+    text-decoration: underline;
+    color: var(--color-white);
 }
 
 .bord {
@@ -226,7 +228,6 @@ nav ul a {
     padding: 6px 0;
 }
 
-
 .profile {
     padding-left: 10px;
     padding-bottom: 5px;
@@ -234,7 +235,7 @@ nav ul a {
     align-items: center;
 }
 
-.square {
+.img-profile {
     width: 18px;
     height: 18px;
     background-color: var(--color-secondary);
@@ -252,7 +253,7 @@ nav ul a {
 
 /* section  */
 .section-container {
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 /* sectio recent */
@@ -283,6 +284,7 @@ nav ul a {
 
 .card-img:hover img {
     opacity: 0.5;
+    transition: ease 0.2s;
 }
 
 .card-title {
@@ -335,24 +337,25 @@ nav ul a {
     display: block;
 }
 
-
+/* toolbar */
 #toolbar {
     background-color: var(--color-toolbar);
     height: 90px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 12px 5px;
+    padding: 13px 10px;
     color: var(--color-white);
 }
 
 .tool-left {
     display: flex;
     align-items: center;
-    
+    width: 25%;
 }
 
 .tool-img {
-    width: 70px;
+    width: 80px;
 }
 
 .tool-left h5{
@@ -368,33 +371,38 @@ nav ul a {
     padding-left: 10px;
 }
 
-.tool-icon{
+.tool-left-icon{
     font-size: 1.5em;
     padding: 0 15px;
 }
 
-.tool-icon i{
+.tool-left-icon i{
     padding: 0 5px;
     color: var(--color-secondary);
 }
 
-.tool-center{
-
+.tool-left-icon i:hover{
+    color: var(--color-white);
+    cursor: pointer;
 }
 
+.tool-center{
+    width: 50%;
+}
 .tool-top-center{
     display: flex;
-    justify-content: space-between;
-    padding-bottom: 10px;
+    /* justify-content: space-between; */
+    justify-content: center;
 }
 
 .tool-top-center i{
+    padding: 0 40px;
     font-size: 2em;
 }
 
 .tool-bottom-center{
     display: flex;
-    align-content: center;
+    align-items: center;
     padding: 10px 15px;
 }
 
@@ -403,7 +411,7 @@ nav ul a {
 }
 
 .bar{
-    width: 300px;
+    width: 500px;
     border-bottom: 3px solid var(--color-secondary);
     align-self: center;
 }
@@ -412,9 +420,11 @@ nav ul a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 25%;
 }
 
 .tool-right i{
+    font-size: 1.5em;
     padding: 0 10px;
 }
 
@@ -495,6 +505,6 @@ nav ul a {
 
     .header {
         left: 50px;
-        width: 92%;
+        width: calc(100% - 50px);
     }
 }
