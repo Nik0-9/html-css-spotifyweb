@@ -431,18 +431,30 @@ nav ul li a {
 }
 
 .tool-bottom-center{
-    height: 40%;
     display: flex;
+    width: 100%;
+    height: 40%;
     gap: 1em;
     justify-content: center;
     align-items: center; 
 }
 
-.bar{
-    width: 80%;
-    border-bottom: 3px solid var(--color-secondary);
-    border-radius: 30px;
-    align-self: center;
+.full-bar{
+    height: 5px;
+    border-radius: 20px;
+    width: 100%;
+    background-color: var(--color-secondary);
+}
+
+.progress{
+    position: relative;
+    height: 100%;
+    width: 30%;
+    border-radius: 20px;
+}
+
+.full-bar:hover .progress{
+    background-color: var(--color-green);
 }
 
 .tool-right{
@@ -456,11 +468,8 @@ nav ul li a {
     font-size: 1.5em;
 }
 
-.mini-bar{
-    width: 100px;
-    border-bottom: 3px solid var(--color-secondary);
-    border-radius: 30px;
-    align-self: center;
+.volume{
+    width: 40%;
 }
 /* media query */
 
