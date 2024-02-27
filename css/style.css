@@ -33,9 +33,6 @@ body {
     font-size: 0.9em;
 }
 
-body::-webkit-scrollbar-track {
-    background: var(--color-green); 
-  }
 
 .wrapper {
     height: 100vh;
@@ -50,6 +47,26 @@ main {
     color: var(--color-white);
     overflow-y: auto;
 }
+
+::-webkit-scrollbar {
+    width: 15px;
+  }
+    
+  ::-webkit-scrollbar-track {
+    background: var(--color-primary);
+    border-radius: 20px;
+  }
+    
+  ::-webkit-scrollbar-thumb {
+    height: 20px;
+    background: var(--color-green);
+    border-radius: 20px;
+    box-shadow: -3px -3px 10px inset var(--color-primary);
+  } 
+  
+  ::-webkit-scrollbar-track:hover{
+    background-color: var(--color-secondary);
+  }
 
 img {
     width: 100%;
@@ -139,6 +156,7 @@ nav a:after{
 
 nav a:hover {
     color: var(--color-white);
+    transform: scale(1.2);
 }
 
 nav a:hover:after{
@@ -217,12 +235,22 @@ nav ul li a {
     min-height: 0;
 }
 
+
 .playlist h4 {
     text-transform: uppercase;
     color: var(--color-white);
     font-size: 1.3em;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.create a:hover{
+    color: var(--color-white);
+}
+
+.create a{
+    color: var(--color-secondary);
+    padding: 5px 0;
 }
 
 .playlist ul{
@@ -392,7 +420,7 @@ nav ul li a {
 }
 
 .tool-img {
-    width: 80px;
+    width: 70px;
 }
 
 .tool-left .in-play{
@@ -407,6 +435,10 @@ nav ul li a {
     color: var(--color-secondary);
 }
 
+.in-play a :hover{
+    text-decoration: underline;
+}
+
 .tool-left i{
     color: var(--color-secondary);
     font-size: 1.5em;
@@ -418,8 +450,13 @@ nav ul li a {
     cursor: pointer;
 }
 
+
+.in-play a{
+    color: var(--color-white);
+}
+
 .tool-center{
-    width: 50%;
+flex-grow: 2;
 }
 
 .tool-top-center{
@@ -450,7 +487,7 @@ nav ul li a {
 .full-bar{
     height: 5px;
     border-radius: 20px;
-    width: 100%;
+    width: 80%;
     background-color: var(--color-secondary);
 }
 
@@ -540,7 +577,7 @@ nav ul li a {
     }
 
     .card {
-        width: calc(100% / 4 - 20px);
+        width: calc(100% / 4 - 15px);
     }
 
 }
@@ -584,6 +621,11 @@ nav ul li a {
     nav ul li{
         padding: 10px;
     }
+
+    .row{
+        gap: 10px;
+    }
+
     .card {
         width: calc(100% / 2 - 20px);
     }
