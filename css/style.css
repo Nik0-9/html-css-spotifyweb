@@ -701,13 +701,21 @@ flex-grow: 2;
     }
 
     .tool-right{
-        justify-content: flex-end;
+        flex-wrap: wrap;
     }
 
-    .volume{
+    .tool-right .volume{
         display: none;
     }
+    
+    .tool-right:hover .volume{
+        display: inline-block;
+        transform: rotate(-90deg);
+        position: relative;
+        
 
+        /* width: 200px; */
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -717,18 +725,6 @@ flex-grow: 2;
 
     .tool-left img{
         width: 60px;
-    }
-
-    .volume{
-        display: none;
-    }
-
-    .tool-right i:last-child:hover .full-{
-        display: block;
-        position: relative;
-        top: 0px;
-        left: -50px;
-        width: 100%;
     }
 
 }
