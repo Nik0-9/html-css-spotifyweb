@@ -531,6 +531,7 @@ flex-grow: 2;
 .tool-right i:hover{
     transform: scale(1.3);
 }
+
 .full-bar-right{
     height: 5px;
     border-radius: 20px;
@@ -545,8 +546,8 @@ flex-grow: 2;
 .small-point{
     position: relative;
     display: none;
-    left: 90%;
-    bottom: 5px;
+    left: 30%;
+    bottom: 9px;
     width: 15px;
     height: 15px;
     background-color: var(--color-white);
@@ -680,6 +681,7 @@ flex-grow: 2;
 
     .tool-left{
         gap: 0.6em;
+        width: 30%;
     }
 
     .tool-center{
@@ -693,12 +695,17 @@ flex-grow: 2;
     .tool-bottom-center{
         gap: 5px;
     }
-    .full-bar{
-        width: 55%;
-    }
 
     .bar{
         width: 60%;
+    }
+
+    .tool-right{
+        justify-content: flex-end;
+    }
+
+    .volume{
+        display: none;
     }
 
 }
@@ -712,17 +719,18 @@ flex-grow: 2;
         width: 60px;
     }
 
-    .mini-bar{
-        display: none;
-    }
-
-    .tool-right{
-        justify-content: space-around;
-    }
-
     .volume{
         display: none;
     }
+
+    .tool-right i:last-child:hover .full-{
+        display: block;
+        position: relative;
+        top: 0px;
+        left: -50px;
+        width: 100%;
+    }
+
 }
 
 @media screen and (max-height: 200px){
