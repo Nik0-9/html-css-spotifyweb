@@ -59,6 +59,7 @@ img {
 .content {
     height: calc(100vh - 90px);
     width: 100%;
+    overflow: hidden;
 }
 
 h2 {
@@ -156,7 +157,7 @@ nav ul li a {
     color: var(--color-secondary);
     width: 200px;
     height: 100%;
-
+    min-height: 480px;
 }
 
 /* sidebar */
@@ -213,7 +214,7 @@ nav ul li a {
 
 .playlist {
     padding-left: 10px;
-    min-height: 0px;
+    min-height: 0;
 }
 
 .playlist h4 {
@@ -682,9 +683,8 @@ nav ul li a {
     }
 }
 
-@media screen and (max-height 500px){
-    #toolbar{
-        position: absolute;
-        
+@media screen and (max-height: 200px){
+    .header{
+        display: none;
     }
 }
